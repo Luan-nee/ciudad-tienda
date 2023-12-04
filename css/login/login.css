@@ -1,0 +1,61 @@
+:root{
+    --tamanio-formX: 100vw;
+    --background-from: #222f3a;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* --------estilos para el formulario-------- */
+.formulario_registroSecion{
+    background-color: var(--background-from);
+    width: var(--tamanio-formX);
+    color: white;
+    display: grid;
+    gap: 1em;
+}
+.title_form{
+    text-align: center;
+    color: rgb(234, 20, 241);
+    font-family: monospace;
+    font-size: 3em;
+}
+.form_input{
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    background-color: none;
+    padding: 0.4em 1.2em;
+    font-size: 1.3em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 1px;
+    color:white;
+}
+.color_inputText{
+    background-color: transparent;
+}
+.btn_submit{
+    cursor: pointer;
+    color:white;
+    background-color: #7756c3;
+
+    border-style: none;
+}
+/* --------estilos para el puppet-------- */
+.puppet_login{
+    background-color: rgb(36, 36, 36);
+    width: 500px;
+    padding: 1em;
+    border-radius: 1em;
+}
+/* estilos del contenido del puppet */
+.title_puppet{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: orange;
+}
+.enunciado_puppet{
+    font-size: 1.2em;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
