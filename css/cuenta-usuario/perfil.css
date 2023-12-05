@@ -106,8 +106,12 @@
 
 /* -----estilos para cada producto del usuario/perfil---------- */
 .conteiner-producto{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    gap: 1em; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     gap: 1em;
 }
 .producto{
