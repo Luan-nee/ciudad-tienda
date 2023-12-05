@@ -25,7 +25,7 @@
         </section>
         <section class="conteiner-producto">
             <!-- inicio de la estructura de los productos -->
-            <?php for ($i=0; $i < 3; $i++) { ?>
+            <?php for ($i=0; $i < 5; $i++) { ?>
                 <article class="producto">
                     <!-- img momentanea -->
                     <img src="../../img/img-gato.jpg" alt=""> 

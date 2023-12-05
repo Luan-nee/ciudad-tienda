@@ -3,10 +3,22 @@
     margin: 0px;
 }
 body{
-    background-color: purple;
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
 }
 a{
     text-decoration: none;
     color: white;
+}
+.conteiner-icono-fecha{
+    background-color: var(--colorFondo-oscuro);
+    padding: 0.2em 0.5em;
+    border-radius: 0.8em;
+}
+.icono-fecha{
+    width: 60px;
+    object-fit: cover;
 }

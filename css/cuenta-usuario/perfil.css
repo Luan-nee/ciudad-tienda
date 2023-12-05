@@ -2,22 +2,20 @@
     --colorFondo-claro: #23313c;
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
-    --tamFoto-user: 130px;
+    --tamFoto-user: 150px;
     --tamFotoProductY: 200px;
 }
 
 /* -----Estilos para el header---------- */
 .header_section{
-    /* fondo momentaneo */
-    background-image: purple;
     display: flex;
     flex-direction: column;
-    /* espacio de con la parte de arriba */
-    padding-top: 5em; 
+    padding-top: 1em;
 }
 .header_nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-right: 1em;
     padding-left: 1em;
 }
@@ -42,6 +40,7 @@
     padding: 0em 1em;
     background-color:var(--colorFondo-claro);
     display: grid;
+    align-items: start;
 }
 /* estilos para el sub-header */
 .sub-head{
@@ -68,6 +67,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 2em;
+    padding-top: 1em;
     padding-left: calc(var(--tamFoto-user) + 1em);
 }
 .--numProduc, .--numSegui{
@@ -79,6 +80,8 @@
 .conteiner-nav{
     margin-top: 2em;
     margin-bottom: 1em;
+    top: 0px;
+    position: sticky;
 }
 .conteiner-nav nav{
     background-color: var(--colorFondo-oscuro);
