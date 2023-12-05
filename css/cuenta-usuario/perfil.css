@@ -1,4 +1,81 @@
 :root{
+    --coloFondo: #23313c;
     --tamFoto-user: 200px;
     --tamFotoProduct: 100px;
+}
+
+/* -----Estilos para el header---------- */
+.header_section{
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    /* espacio de con la parte de arriba */
+    padding-top: 5em; 
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.header_title{
+    text-align: center;
+    font-size: 3em;
+}
+.header_conteiner-puntos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+.header_conteiner-puntos .punto{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+/* -----Estilos para toda la parte del cuerpo---------- */
+.conteiner-All{
+    background-color:var(--coloFondo);
+    display: grid;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+.blue{
+    background-color: blue;
+}
+/* estilos para el sub-header */
+.sub-head{
+    display: flex;
+    position: relative;
+}
+.conteiner-img{
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: var(--tamFoto-user);
+    height: var(--tamFoto-user);
+    top: calc((-1)*(var(--tamFoto-user)/2));
+}
+.conteiner-img img{
+    object-fit: cover;
+    width: 100%;
+}
+.datos_sub-head{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: calc(var(--tamFoto-user) + 1em);
+}
+.--numProduc, .--numSegui{
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
 }
