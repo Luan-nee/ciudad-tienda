@@ -5,36 +5,38 @@
 <body>
     <?php include("../reutilizable/header.php"); ?>
     <section class="conteiner-All">
-        <section class="sub-head red">
+        <section class="sub-head">
             <div class="conteiner-img">
                 <img src="../../img/img_user.png" alt="#">
             </div>
-            <article class="datos_sub-head">
+            <section class="datos_sub-head">
                 <!-- los estilos asignados no son de importancia -->
                 <h3 class="--numProduc">12345</h3>
                 <h3 class="--numSegui">54321</h3>
                 <p>Productos</p>
                 <p>Seguidores</p>
-            </article>
+            </section>
         </section>
-        <section class="blue">
+        <section class="conteiner-nav">
             <nav>
                 <a href="#">Productos</a>
                 <a href="#">Otros</a>
             </nav>
         </section>
-        <section class="informacion-user black">
+        <section class="conteiner-producto">
             <!-- inicio de la estructura de los productos -->
-            <article>
-                <!-- img momentanea -->
-                <img src="" alt=""> 
-                <h3>Este es un producto</h3>
-                <p>esta es una paqueña descripción</p>
-                <footer>
-                    <h4>0000 likes</h4>
-                    <h4>0000 ventas</h4>
-                </footer>
-            </article>
+            <?php for ($i=0; $i < 3; $i++) { ?>
+                <article class="producto">
+                    <!-- img momentanea -->
+                    <img src="../../img/img-gato.jpg" alt=""> 
+                    <h3>Este es un producto</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur consequuntur, fugiat delectus saepe cupiditate omnis facere debitis? Repudiandae esse iure incidunt, officiis quae veniam quos eligendi facere maxime expedita, eveniet non ad veritatis laboriosam et vel assumenda voluptas, rerum hic.</p>
+                    <footer>
+                        <h4>0000KM likes</h4>
+                        <h4>0000KM ventas</h4>
+                    </footer>
+                </article>
+            <?php } ?>
             <!-- fin de la estructura -->
         </section>
     </section>
