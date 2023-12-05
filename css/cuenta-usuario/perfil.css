@@ -2,7 +2,7 @@
     --colorFondo-claro: #23313c;
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
-    --tamFoto-user: 150px;
+    --tamFoto-user: 250px;
     --tamFotoProductY: 200px;
 }
 
@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 1em;
+    padding-bottom: calc(var(--tamFoto-user)/2) 
 }
 .header_nav{
     display: flex;
@@ -46,6 +47,8 @@
 .sub-head{
     display: flex;
     position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 .conteiner-img{
     position: absolute;
@@ -70,15 +73,27 @@
     column-gap: 2em;
     padding-top: 1em;
     padding-left: calc(var(--tamFoto-user) + 1em);
+
+    font-size: 1.3em;
 }
 .--numProduc, .--numSegui{
+    font-size: 1.5em;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
 }
+/* estilos para el botón de seguir */
+.btn-seguir{
+    background-color: #4100b2;
+    border-style: none;
+    font-size: 1.3em;
+    padding: 0.3em 1em;
+    border-radius: 10px;
+    color: white;
+}
 /* -----estilos para el navegador del pefil---------- */
 .conteiner-nav{
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 1em;
     top: 0px;
     position: sticky;
@@ -106,10 +121,6 @@
 
 /* -----estilos para cada producto del usuario/perfil---------- */
 .conteiner-producto{
-    /* display: flex;
-    flex-direction: column;
-    gap: 1em; */
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     gap: 1em;
@@ -141,3 +152,40 @@
     gap: 2em;
 }
 /* estilos para computadora */
+@media (max-width: 620px){
+    .conteiner-producto{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .conteiner-img{
+        top: calc(-150px/2);
+        width: 150px;
+        height: 150px;
+    }
+    .datos_sub-head{
+        padding-left: calc(150px + 1em);
+        font-size: 1em;
+    }
+    .header_title{
+        padding-left: calc(150px + 0.5em);
+        font-size: 1.8em;
+    }
+    .header_section{
+        /* padding-top: 1em; */
+        padding-bottom: calc(100px/2) 
+    }
+}
+@media (max-width: 590px){
+    .conteiner-producto{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+/* estilos usados con javascript */
+.overflow-text{
+    height: 144px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
