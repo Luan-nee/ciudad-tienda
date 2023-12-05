@@ -10,8 +10,3 @@ body{
     background-color: rgb(102, 13, 175);
     color: white;
 }
-/*--- Estilos para el contenido del header --------*/
-.title_header{
-    text-align: center;
-    font-size: 2.3em;
-}
