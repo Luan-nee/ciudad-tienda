@@ -1,11 +1,13 @@
 let descripProduc = document.querySelectorAll(".description-producto");
+let puntoSuspensivos = document.querySelectorAll(".puntSuspensivo")
+let tamPantalla = window.innerWidth;
+
 console.log(descripProduc[0]);
 
 // obtener la altura de elemento párrafo
-if(descripProduc[0].offsetHeight >= 130){
-    console.log("alllllll");
+if(descripProduc[0].offsetHeight >= 108 && tamPantalla <= 600 ){
     descripProduc[0].classList.toggle("overflow-text");
-    console.log("clases aplicadas");
+    puntoSuspensivos[0].classList.toggle("display--block");
 }
 
 /*

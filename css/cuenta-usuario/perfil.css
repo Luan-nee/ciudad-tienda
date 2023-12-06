@@ -2,8 +2,12 @@
     --colorFondo-claro: #23313c;
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
+    /* tamaño para pantalla monitor */
     --tamFoto-user: 250px;
     --tamFotoProductY: 200px;
+    /* tamaño para celular */
+    --tamFoto-user_cel: 100px;
+    --tamFotoProductoY_cel: 100px;
 }
 
 /* -----Estilos para el header---------- */
@@ -140,6 +144,18 @@
     text-align: start;
     font-size: 1.9em;
 }
+.description-producto{
+    position: relative;
+}
+.puntSuspensivo{
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.display--block{
+    display: block;
+}
 .producto img{
     height: var(--tamFotoProductY);
     grid-row-start: 1;
@@ -152,28 +168,52 @@
     gap: 2em;
 }
 /* estilos para computadora */
+/* 
+--tamFoto-user_cel: 150px;
+--tamFotoProductoY_cel: 100px; 
+*/
 @media (max-width: 620px){
-    .conteiner-producto{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
-    .conteiner-img{
-        top: calc(-150px/2);
-        width: 150px;
-        height: 150px;
-    }
-    .datos_sub-head{
-        padding-left: calc(150px + 1em);
-        font-size: 1em;
-    }
+    /* estilos para el head */
     .header_title{
-        padding-left: calc(150px + 0.5em);
+        padding-left: calc(var(--tamFoto-user_cel) + 0.5em);
         font-size: 1.8em;
     }
     .header_section{
         /* padding-top: 1em; */
         padding-bottom: calc(100px/2) 
+    }
+    .sub-head{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .datos_sub-head{
+        padding-left: calc(var(--tamFoto-user_cel) + 1em);
+        column-gap: 1em;
+        font-size: 0.8em;
+    }
+    .conteiner-img{
+        top: calc((-1)*var(--tamFoto-user_cel)/2);
+        width: var(--tamFoto-user_cel);
+        height: var(--tamFoto-user_cel);
+    }
+    /* estilos para el producto */
+    .conteiner-nav{
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    .conteiner-producto{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .producto{
+        height: calc(var(--tamFotoProductoY_cel) + 2em);
+    }
+    .producto img{
+        height: calc(var(--tamFotoProductoY_cel) + 2em);
+    }
+    .producto h3{
+        font-size: 1.6em;
     }
 }
 @media (max-width: 590px){
@@ -185,7 +225,7 @@
 }
 /* estilos usados con javascript */
 .overflow-text{
-    height: 144px;
+    height: 72px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
