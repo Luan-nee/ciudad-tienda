@@ -47,7 +47,6 @@ NOMBRE DEL PROYECTO: CIUDAD
                     <img src="../../img/img-gato.jpg" alt=""> 
                     <h3>Titulo del producto</h3>
                     <p class="description-producto">
-                        Lorem ipsum dolor  sit, amet consectetur adipisicing elit. Tenetur consequuntur, fugiat delectus saepe cupiditate omnis facere debitis? Repudiandae esse iure incidunt, officiis quae veniam quos eligendi facere maxime expedita, eveniet non ad veritatis laboriosam et vel assumenda voluptas, rerum hic.
                         <span class="puntSuspensivo">...</span>
                     </p>
                     <footer>

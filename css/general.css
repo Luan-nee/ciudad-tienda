@@ -32,14 +32,42 @@ ul{
 }
 /* contiener-opciones-menu */
 .contiener-opciones-menu{
-    position: sticky;
-    background-color: rgb(40, 112, 154);
+    background-color: var(--colorFondo-oscuro);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     z-index: 2;
-
+    font-size: 2em;
+    /* bordes */
+    border-radius: 1em 0em 1em 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(205, 43, 226);
     /* posicionamiento */
     top: 0px;
+    right: 0px;
     /* animación */
     transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+
+    /* escondiendo la ventana */
+    display: none;
+}
+.contiener-opciones-menu li{
+    display: grid;
+}
+.contiener-opciones-menu li a{
+    padding: 1em;
+
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgb(205, 43, 226);
+}
+
+/* aparecer */
+.aparecer-grid{
+    display: grid;
 }
 
 /* reponsive */

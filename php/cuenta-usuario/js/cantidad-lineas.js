@@ -2,6 +2,21 @@ let descripProduc = document.querySelectorAll(".description-producto");
 let puntoSuspensivos = document.querySelectorAll(".puntSuspensivo")
 let tamPantalla = window.innerWidth;
 
+let puntos = document.querySelector(".header_conteiner-puntos");
+let ventanaFlotante = document.querySelector(".contiener-opciones-menu");
+let cuerpo = document.querySelector("body");
+
+puntos.addEventListener("click", (e)=>{
+    console.log(e.target.nodeName);
+    if(e.target.classList[0] != "header_conteiner-puntos" || e.target.classList[0] != "punto" ){
+        ventanaFlotante.classList.toggle("aparecer-grid");
+    }
+    // if(e.target.){  
+    //     ventanaFlotante.classList.toggle("aparecer-grid");
+    // }
+})
+
+
 console.log(descripProduc[0]);
 
 // obtener la altura de elemento párrafo

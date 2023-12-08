@@ -1,18 +1,3 @@
-<!-- opciones del menu flotante
-<ul class="contiener-opciones-menu">
-        <li>
-            <a href="#">inicio</a>
-        </li>
-        <li>
-            <a href="#">ofertas</a>
-        </li>
-        <li>
-            <a href="#">ultimo momento</a>
-        </li>
-        <li>
-            <a href="#">cerrar sessión</a>
-        </li>
-    </ul> -->
 <section class="header_section">
     <nav class="header_nav">
         <a class="conteiner-icono-fecha" href="#">
@@ -23,13 +8,36 @@
             <div class="punto"></div>
             <div class="punto"></div>
         </div>
+        <!-- opciones del menu flotante -->
+        <ul class="contiener-opciones-menu">
+            <li>
+                <a href="#">inicio</a>
+            </li>
+            <li>
+                <a href="#">ofertas</a>
+            </li>
+            <li>
+                <a href="#">ultimo momento</a>
+            </li>
+            <li>
+                <a href="#">cerrar sessión</a>
+            </li>
+        </ul> 
     </nav>
     
     <!-- aplicar una restricción para el nombres
     muy largos-->
-    <h1 class="header_title">
-        <span class="header_title-texto">
+    <div class="header_title">
+        <h1>
             Luan Del Sol Huillca Sánchez
-        </span>
-    </h1>
+        </h1>
+        <p>
+            <span>
+                corre@eléctronico.com
+            </span>
+            <span>
+                900210102
+            </span>
+        </p>
+    </div>
 </section>
