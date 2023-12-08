@@ -1,14 +1,3 @@
-:root{
-    --colorFondo-claro: #23313c;
-    --colorFondo-oscuro: #0f161c;
-    --colorFondo: #0f161c;
-    /* tamaño para pantalla monitor */
-    --tamFoto-user: 14em;
-    --tamFotoProductY: 12em;
-    /* tamaño para celular */
-    --tamFoto-user_cel: 100px;
-    --tamFotoProductoY_cel: 100px;
-}
 
 /* -----Estilos para el header---------- */
 .header_section{
@@ -46,21 +35,6 @@
     background-color: var(--colorFondo-claro);
     padding: 0.2em 1em;
     border-radius: 0.3em 0.3em 0em 0em;
-}
-
-.header_conteiner-puntos{
-    display: flex;
-    flex-direction: column;
-    gap: 0.4em;
-    padding: 0.5em 1.5em;
-    background-color: var(--colorFondo-oscuro);
-    border-radius: 0.7em;
-}
-.header_conteiner-puntos .punto{
-    background-color: white;
-    width: 0.7em;
-    height: 0.7em;
-    border-radius: 50%;
 }
 /* -----Estilos para toda la parte del cuerpo---------- */
 .conteiner-All{

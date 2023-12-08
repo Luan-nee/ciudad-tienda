@@ -1,3 +1,11 @@
+:root{
+    --colorFondo-claro: #23313c;
+    --colorFondo-oscuro: #0f161c;
+    --colorFondo: #0f161c;
+    /* tamaños */
+    --tamFoto-user: 14em;
+    --tamFotoProductY: 12em;
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -31,6 +39,20 @@ ul{
     width: 3.6em;
     object-fit: cover;
 }
+.header_conteiner-puntos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding: 0.5em 1.5em;
+    background-color: var(--colorFondo-oscuro);
+    border-radius: 0.7em;
+}
+.header_conteiner-puntos .punto{
+    background-color: white;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+}
 /* contiener-opciones-menu */
 .contiener-opciones-menu{
     background-color: var(--colorFondo-oscuro);
@@ -55,6 +77,7 @@ ul{
     /* escondiendo la ventana */
     display: none;
 }
+
 .contiener-opciones-menu li{
     display: grid;
 }
@@ -66,7 +89,7 @@ ul{
     border-color: rgb(205, 43, 226);
 }
 
-/* aparecer */
+/* estilos aplicados con javascript */
 .aparecer-grid{
     display: grid;
 }

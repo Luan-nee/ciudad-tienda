@@ -25,9 +25,9 @@
         </ul> 
     </nav>
     
-    <!-- aplicar una restricción para el nombres
-    muy largos-->
+    <!-- información solo del apartado perfil-user -->
     <div class="header_title">
+        <!-- aplicar una restricción para el nombres muy largos-->
         <h1>
             Luan Del Sol Huillca Sánchez
         </h1>
