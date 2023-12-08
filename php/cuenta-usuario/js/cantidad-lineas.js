@@ -1,36 +1,32 @@
-let descripProduc = document.querySelectorAll(".description-producto");
-let puntoSuspensivos = document.querySelectorAll(".puntSuspensivo")
-let tamPantalla = window.innerWidth;
-
 let puntos = document.querySelector(".header_conteiner-puntos");
 let ventanaFlotante = document.querySelector(".contiener-opciones-menu");
 let cuerpo = document.querySelector("body");
+var flap = false;
 
 puntos.addEventListener("click", (e)=>{
-    console.log(e.target.nodeName);
-    if(e.target.classList[0] != "header_conteiner-puntos" || e.target.classList[0] != "punto" ){
+    if(e.target.classList[0] != "header_conteiner-puntos" || e.target.classList[0] != "punto"){
         ventanaFlotante.classList.toggle("aparecer-grid");
+        flap = true;
     }
-    // if(e.target.){  
-    //     ventanaFlotante.classList.toggle("aparecer-grid");
-    // }
+    e.stopPropagation();
+})
+cuerpo.addEventListener("click", (e)=>{
+    if(e.target.nodeName != "A"){
+        if(e.target.classList[0] != "contiener-opciones-menu" && flap == true){
+            ventanaFlotante.classList.toggle("aparecer-grid");
+            flap = false;
+        }
+    }
+    e.stopPropagation();
 })
 
-
-console.log(descripProduc[0]);
-
-// obtener la altura de elemento párrafo
-if(descripProduc[0].offsetHeight >= 108 && tamPantalla <= 600 ){
-    descripProduc[0].classList.toggle("overflow-text");
-    puntoSuspensivos[0].classList.toggle("display--block");
-}
 
 /*
 Desarrolla un algoritmos en javascript que oculte 
 el exceso de texto del elemento parrafo.
 Este parrafo contiene una pequeña descripción
 del producto que el usuario digitó, pero 
-es tal largo que malogra el diseño.
+es tan largo que malogra el diseño.
 
 El exceso de texto sea remplazado por [...] y 
 seguidamente por una opción que diga "leer más".

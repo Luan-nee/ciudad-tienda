@@ -43,9 +43,9 @@
     color: rgb(116, 111, 255);
 }
 .header_title p{
-    background-color: var(--colorFondo-oscuro);
+    background-color: var(--colorFondo-claro);
     padding: 0.2em 1em;
-    border-radius: 0.3em;
+    border-radius: 0.3em 0.3em 0em 0em;
 }
 
 .header_conteiner-puntos{
