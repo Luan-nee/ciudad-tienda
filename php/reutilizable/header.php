@@ -1,3 +1,18 @@
+<!-- opciones del menu flotante
+<ul class="contiener-opciones-menu">
+        <li>
+            <a href="#">inicio</a>
+        </li>
+        <li>
+            <a href="#">ofertas</a>
+        </li>
+        <li>
+            <a href="#">ultimo momento</a>
+        </li>
+        <li>
+            <a href="#">cerrar sessión</a>
+        </li>
+    </ul> -->
 <section class="header_section">
     <nav class="header_nav">
         <a class="conteiner-icono-fecha" href="#">
@@ -9,9 +24,12 @@
             <div class="punto"></div>
         </div>
     </nav>
+    
     <!-- aplicar una restricción para el nombres
     muy largos-->
     <h1 class="header_title">
-        Luan Del Sol Huillca Sánchez
+        <span class="header_title-texto">
+            Luan Del Sol Huillca Sánchez
+        </span>
     </h1>
 </section>

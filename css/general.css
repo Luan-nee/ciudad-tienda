@@ -13,6 +13,14 @@ a{
     text-decoration: none;
     color: white;
 }
+ul{
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: none;
+}
+
+/* -----estilos para elemento dentro del header--------------------*/
 .conteiner-icono-fecha{
     background-color: var(--colorFondo-oscuro);
     padding: 0.2em 0.5em;
@@ -22,6 +30,19 @@ a{
     width: 60px;
     object-fit: cover;
 }
+/* contiener-opciones-menu */
+.contiener-opciones-menu{
+    position: sticky;
+    background-color: rgb(40, 112, 154);
+    z-index: 2;
+
+    /* posicionamiento */
+    top: 0px;
+    /* animación */
+    transition-duration: 1s;
+}
+
+/* reponsive */
 @media (max-width: 620px){
     .icono-fecha{
         width: 30px;

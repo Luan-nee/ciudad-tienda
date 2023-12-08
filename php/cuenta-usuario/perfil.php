@@ -1,3 +1,9 @@
+<!-- 
+DATOS DEL ESTUDIANTE:
+NOMBRE DEL CURSO: LENGUAJES ESTRUCTURADO
+APELLIDOS Y NOMBRES: HUILLCA SÁNCHEZ, LUAN DEL SOL
+NOMBRE DEL PROYECTO: CIUDAD
+-->
 <?php include("../reutilizable/configuraciones.php"); ?>
     <title>Perfil-User</title>
     <link rel="stylesheet" href="<?php echo $list_css['perfil'];?>">
@@ -5,6 +11,7 @@
 </head>
 <body>
     <?php include("../reutilizable/header.php"); ?>
+    <!-- <?php//include("../login/iniciar_secion.php"); ?> -->
     <section class="conteiner-All">
         <section class="sub-head">
             <label>
@@ -24,15 +31,17 @@
                 <button class="btn-seguir">seguir</button>
             </div>
         </section>
+
         <section class="conteiner-nav">
             <nav>
                 <a href="#">Productos</a>
                 <a href="#">Otros</a>
             </nav>
         </section>
+
         <section class="conteiner-producto">
             <!-- inicio de la estructura de los productos -->
-            <?php for ($i=0; $i < 5; $i++) { ?>
+            <?php for ($i=0; $i < 20; $i++) { ?>
                 <article class="producto">
                     <!-- img momentanea -->
                     <img src="../../img/img-gato.jpg" alt=""> 
