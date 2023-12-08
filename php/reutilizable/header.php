@@ -1,15 +1,17 @@
 <section class="header_section">
     <nav class="header_nav">
-        <a class="conteiner-icono-fecha" href="#">
+        <!-- el link es momentaneo -->
+        <a class="conteiner-icono-fecha" href="../explorar/explorar.php">
             <img class="icono-fecha" src="../../img/flecha-izquierda.png" alt="">
         </a>
-        <div class="header_conteiner-puntos">
+        <!-- la venta nav solo aparece en el apartado perfil-user -->
+        <!-- <div class="header_conteiner-puntos">
             <div class="punto"></div>
             <div class="punto"></div>
             <div class="punto"></div>
-        </div>
+        </div> -->
         <!-- opciones del menu flotante -->
-        <ul class="contiener-opciones-menu">
+        <!-- <ul class="contiener-opciones-menu">
             <li>
                 <a href="#">inicio</a>
             </li>
@@ -22,12 +24,12 @@
             <li>
                 <a href="#">cerrar sessión</a>
             </li>
-        </ul> 
+        </ul>  -->
     </nav>
     
     <!-- información solo del apartado perfil-user -->
-    <div class="header_title">
-        <!-- aplicar una restricción para el nombres muy largos-->
+    <!-- <div class="header_title">
+         //aplicar una restricción para el nombres muy largos
         <h1>
             Luan Del Sol Huillca Sánchez
         </h1>
@@ -39,5 +41,9 @@
                 900210102
             </span>
         </p>
-    </div>
+    </div> -->
+
+    <section class="header_title">
+        <h1>Explorar</h1>
+    </section>
 </section>

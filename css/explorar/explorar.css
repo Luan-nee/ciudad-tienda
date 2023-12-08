@@ -1,0 +1,111 @@
+:root{
+    --tamFotoVendedor: 4.5em;
+    --tamFotoProducto: 10em;
+    --tamSearchY: 3em;
+}
+.header_title h1{
+    text-align: center;
+    font-size: 2.2em;
+}
+/* estilos para el contenedor de producto */
+.conteiner-AllProduct{
+    background-color: var(--colorFondo-claro);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    row-gap: calc((var(--tamFotoVendedor)/2) + 0.3em);
+    column-gap: 1em;
+    padding: calc( (var(--tamSearchY)/2) + 1em ) 0.6em;
+}
+/*----------estilos para el buscador------------ */
+.apartado-buscador{
+    background-color: var(--colorFondo-oscuro);
+    margin-top: calc((var(--tamSearchY)/2) + 1em);
+
+    position: relative;
+}
+/* para el buscador */
+.conteiner-search{
+    position: absolute;
+    margin: auto;
+    bottom: calc((-1)*var(--tamSearchY)/2) ;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap:1em;
+}
+.conteiner-search img{
+    background-color: var(--colorFondo-claro);
+    height: calc(var(--tamSearchY) - 1em) ;
+    object-fit: cover;
+    border-style: solid;
+    padding: 0.3em;
+
+    border-color: rgb(149, 149, 149);
+    border-width: 1px ;
+    border-radius: 0.5em;
+    box-shadow: 0px 5px 10px var(--colorFondo-oscuro);
+}
+.conteiner-search input{
+    background-color: var(--colorFondo-claro);
+    color: white;
+    padding: 1em 1em;
+    font-size: 1em;
+    height: var(--tamSearchY);
+    width: 80vw;
+    max-width: 500px;
+    
+    outline: none;
+    border-style: solid;
+    border-color: rgb(149, 149, 149);
+    border-width: 1px;
+    border-radius: 0.5em;
+    box-shadow: 0px 5px 10px var(--colorFondo-oscuro);
+}
+
+/*----------estilos para cada producto-------------  */
+.producto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: var(--colorFondo-oscuro);
+    border-radius: 0.5em;
+
+    position: relative;
+}
+.producto h3{
+    text-align: center;
+}
+.producto img{
+    width: 100%;
+    border-radius: 0.5em;
+    /* max-height: 250px; */
+    object-fit: cover;
+}
+
+.img-vendedor{
+    background-color: red;
+    width: var(--tamFotoVendedor);
+    height: var(--tamFotoVendedor);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+
+    /* estilos de flote */
+    position: absolute;
+    margin:auto;
+    left: 0;
+    right: 0;
+    bottom: calc((-1)*(var(--tamFotoVendedor)/2));
+}
+.img-vendedor img{
+    height: 100%;
+    object-fit: cover;
+}

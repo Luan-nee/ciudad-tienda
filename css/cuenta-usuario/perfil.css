@@ -1,17 +1,5 @@
 
 /* -----Estilos para el header---------- */
-.header_section{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-}
-.header_nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 1em;
-    padding-left: 1em;
-}
 .header_title{
     padding-top: calc(var(--tamFoto-user)/4);
     padding-left: calc(var(--tamFoto-user)/0.9);

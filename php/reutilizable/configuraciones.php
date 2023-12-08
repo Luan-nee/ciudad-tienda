@@ -7,7 +7,8 @@
 
         //           enlace de css + nombreArchivo.css
         "login" => $direccion_css."login/login.css",
-        "perfil" => $direccion_css."cuenta-usuario/perfil.css"
+        "perfil" => $direccion_css."cuenta-usuario/perfil.css",
+        "explorar" => $direccion_css."explorar/explorar.css"
     );
 
 

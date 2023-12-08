@@ -2,6 +2,7 @@
     --colorFondo-claro: #23313c;
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
+    --colorTextImportante: purple;
     /* tamaños */
     --tamFoto-user: 14em;
     --tamFotoProductY: 12em;
@@ -30,6 +31,18 @@ ul{
 }
 
 /* -----estilos para elemento dentro del header--------------------*/
+.header_section{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+    padding-left: 1em;
+}
 .conteiner-icono-fecha{
     background-color: var(--colorFondo-oscuro);
     padding: 0.2em 0.5em;
