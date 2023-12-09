@@ -14,19 +14,18 @@
     <section id="conteinerProducto" class="conteiner-AllProduct">
         <?php for ($i=0; $i < 14; $i++) { ?>
             <label style="position:relative;">
-                <div class="window-informacion-producto" value="<?php echo $i+1; ?>">
-                </div>
                 <article class="producto">
+                    <div class="window-informacion-producto" value="<?php echo $i+1; ?>"></div>
                     <h3>nombre del producto</h3>
                     <!-- restricción al tamaño vertical de la imagen -->
                     <!-- <img src="../../img/img-raro.jpg" alt=""> -->
                     <img src="../../img/img-gato2.jpg" alt="">
-                    <a href="../cuenta-usuario/perfil.php?correo=1">
-                        <div class="img-vendedor">
-                            <img src="../../img/img_user.png" alt="">
-                        </div>
-                    </a>
                 </article>
+                <a class="direction-perfil-vendedor" href="../cuenta-usuario/perfil.php?correo=1">
+                    <div class="img-vendedor">
+                        <img src="../../img/img_user.png" alt="">
+                    </div>
+                </a>
                 <!-- descripción del producto -->
                 <div class="description-producto">
                     <p>
