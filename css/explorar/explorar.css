@@ -15,6 +15,8 @@
     row-gap: calc((var(--tamFotoVendedor)/2) + 0.3em);
     column-gap: 1em;
     padding: calc( (var(--tamSearchY)/2) + 1em ) 0.6em;
+
+    border-radius: 1em 1em 0em 0em;
 }
 /*----------estilos para el buscador------------ */
 .apartado-buscador{
@@ -90,6 +92,7 @@
     z-index: 2;
 }
 .img-vendedor{
+    z-index: 2;
     background-color: red;
     width: var(--tamFotoVendedor);
     height: var(--tamFotoVendedor);
@@ -116,7 +119,7 @@
 
 /* estilos para la descripción de producto */
 .description-producto{
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     background-color: black;
     border-radius: 0.5em;
@@ -124,11 +127,17 @@
     width: 100%;
     max-width: 100%;
     height: 100%;
+    right: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .window-informacion-producto{
+    z-index: 1;
     background-color: rgba(255, 0, 0, 0.326);
     position: absolute;
     border-radius: 0.5em;
