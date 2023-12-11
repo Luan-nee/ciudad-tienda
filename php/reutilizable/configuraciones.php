@@ -8,7 +8,8 @@
         //           enlace de css + nombreArchivo.css
         "login" => $direccion_css."login/login.css",
         "perfil" => $direccion_css."cuenta-usuario/perfil.css",
-        "explorar" => $direccion_css."explorar/explorar.css"
+        "explorar" => $direccion_css."explorar/explorar.css",
+        "registrarProducto" => $direccion_css."cuenta-usuario/registroProducto.css"
     );
 
 
@@ -28,3 +29,4 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $list_css['general']; ?>">
+    <script defer src="../../JS/cantidad-lineas.js"></script>

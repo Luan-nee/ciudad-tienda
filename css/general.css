@@ -3,6 +3,7 @@
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
     --colorTextImportante: purple;
+    --fondo-btn: #ba03ba;
     /* tamaños */
     --tamFoto-user: 14em;
     --tamFotoProductY: 12em;
@@ -68,6 +69,7 @@ ul{
 }
 /* contiener-opciones-menu */
 .contiener-opciones-menu{
+    z-index: 5;
     background-color: var(--colorFondo-oscuro);
     position: absolute;
     display: flex;
@@ -105,11 +107,4 @@ ul{
 /* estilos aplicados con javascript */
 .aparecer-grid{
     display: grid;
-}
-
-/* reponsive */
-@media (max-width: 620px){
-    .icono-fecha{
-        width: 30px;
-    }
 }

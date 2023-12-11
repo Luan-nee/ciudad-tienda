@@ -1,13 +1,6 @@
-<!-- 
-DATOS DEL ESTUDIANTE:
-NOMBRE DEL CURSO: LENGUAJES ESTRUCTURADO
-APELLIDOS Y NOMBRES: HUILLCA SÁNCHEZ, LUAN DEL SOL
-NOMBRE DEL PROYECTO: CIUDAD
--->
 <?php include("../reutilizable/configuraciones.php"); ?>
-    <title>Perfil-User</title>
+    <title>Registro Producto</title>
     <link rel="stylesheet" href="<?php echo $list_css['perfil'];?>">
-    <script defer src="js/cantidad-lineas.js"></script>
 </head>
 <body>
     <?php include("../reutilizable/header.php"); ?>
@@ -34,8 +27,8 @@ NOMBRE DEL PROYECTO: CIUDAD
 
         <section class="conteiner-nav">
             <nav>
+                <a href="#">novedad</a>
                 <a href="#">Productos</a>
-                <a href="#">Otros</a>
             </nav>
         </section>
 

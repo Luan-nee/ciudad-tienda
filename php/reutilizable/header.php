@@ -5,31 +5,34 @@
             <img class="icono-fecha" src="../../img/flecha-izquierda.png" alt="">
         </a>
         <!-- la venta nav solo aparece en el apartado perfil-user -->
-        <!-- <div class="header_conteiner-puntos">
+        <div class="header_conteiner-puntos">
             <div class="punto"></div>
             <div class="punto"></div>
             <div class="punto"></div>
-        </div> -->
+        </div>
         <!-- opciones del menu flotante -->
-        <!-- <ul class="contiener-opciones-menu">
+        <ul class="contiener-opciones-menu">
             <li>
-                <a href="#">inicio</a>
+                <a href="../cuenta-usuario/formulario-producto.php">Subir producto</a>
             </li>
             <li>
-                <a href="#">ofertas</a>
+                <a href="../cuenta-usuario/perfil.php">Mi perfil</a>
             </li>
             <li>
-                <a href="#">ultimo momento</a>
+                <a href="#">Ajustes de cuenta</a>
             </li>
             <li>
-                <a href="#">cerrar sessión</a>
+                <a href="../explorar/explorar.php">explorar</a>
             </li>
-        </ul>  -->
+            <li>
+                <a href="#">Cerrar sessión</a>
+            </li>
+        </ul> 
     </nav>
     
     <!-- información solo del apartado perfil-user -->
     <!-- <div class="header_title">
-         //aplicar una restricción para el nombres muy largos
+        //aplicar una restricción para el nombres muy largos
         <h1>
             Luan Del Sol Huillca Sánchez
         </h1>
@@ -44,6 +47,6 @@
     </div> -->
 
     <section class="header_title">
-        <h1>Explorar</h1>
+        <h1>Registrar Producto</h1>
     </section>
 </section>

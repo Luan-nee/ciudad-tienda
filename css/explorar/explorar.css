@@ -138,7 +138,7 @@
 }
 .window-informacion-producto{
     z-index: 1;
-    background-color: rgba(255, 0, 0, 0.326);
+    /* background-color: rgba(255, 0, 0, 0.326); */
     position: absolute;
     border-radius: 0.5em;
     top: 0px;
