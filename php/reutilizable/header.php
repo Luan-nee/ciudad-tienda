@@ -11,40 +11,25 @@
             <div class="punto"></div>
         </div>
         <!-- opciones del menu flotante -->
-        <ul class="contiener-opciones-menu">
-            <li>
-                <a href="../cuenta-usuario/formulario-producto.php">Subir producto</a>
-            </li>
+        <ul style="z-index: 4;" class="contiener-opciones-menu">
             <li>
                 <a href="../cuenta-usuario/perfil.php">Mi perfil</a>
             </li>
             <li>
-                <a href="#">Ajustes de cuenta</a>
+                <a href="../cuenta-usuario/formulario-producto.php">Publicar <br> producto</a>
             </li>
             <li>
                 <a href="../explorar/explorar.php">explorar</a>
             </li>
             <li>
-                <a href="#">Cerrar sessión</a>
+                <a 
+                style="
+                background-color: #c12424;
+                color:white;" 
+                href="../login/iniciar_secion.php">Cerrar sessión</a>
             </li>
         </ul> 
     </nav>
-    
-    <!-- información solo del apartado perfil-user -->
-    <!-- <div class="header_title">
-        //aplicar una restricción para el nombres muy largos
-        <h1>
-            Luan Del Sol Huillca Sánchez
-        </h1>
-        <p>
-            <span>
-                corre@eléctronico.com
-            </span>
-            <span>
-                900210102
-            </span>
-        </p>
-    </div> -->
 
     <section class="header_title">
         <h1>Registrar Producto</h1>

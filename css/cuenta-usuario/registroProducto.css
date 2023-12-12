@@ -76,7 +76,23 @@
 }
 .datos-producto input[type="submit"]{
     cursor: pointer;
-    border-radius: 0em 0em 0.5em 0.5em;
+    border-radius: 0.5em;
     margin-top: 1em;
     background-color: var(--fondo-btn);
+}
+/* responsive */
+@media (width <= 560px){
+    body{
+        font-size: 10px;
+    }
+}
+@media (width <= 357px){
+    body{
+        font-size: 8px;
+    }
+}
+@media (width <= 270px){
+    body{
+        font-size: 6px;
+    }
 }

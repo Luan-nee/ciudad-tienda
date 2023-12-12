@@ -55,13 +55,18 @@ conteninerProduct.addEventListener("click", (e)=>{
 
     if(elemenTemp.id == elementoActual.id  || elemenTemp.id == ""){
         elementoActual.element.style.right = "-" + (elementoActual.width + 5) + "px";
+        elementoActual.element.style.opacity = "1";
         flap++;
     }else{
         elementoActual.element.style.right = "-" + (elementoActual.width + 5) + "px";
+        elementoActual.element.style.opacity = "1";
+
         elemenTemp.element.style.right = "0px";
+        elemenTemp.element.style.opacity = "0"
     }
     if(flap == 2){
         elementoActual.element.style.right = "0px";
+        elementoActual.element.style.opacity = "0";
         flap = 0;
     }
 

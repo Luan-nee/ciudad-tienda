@@ -7,7 +7,7 @@
     <?php include("../reutilizable/header.php"); ?>
     <section class="apartado-buscador">
         <label class="conteiner-search" for="buscador">
-            <input type="search" id="buscador">
+            <input type="search" id="buscador" placeholder="Buscar producto..">
             <img src="../../img/icono/lupa.png" alt="">
         </label>
     </section>

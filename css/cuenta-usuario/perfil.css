@@ -154,6 +154,18 @@
     align-items: start;
     gap: 2em;
 }
+/* -----datos sobre el dueño--------------------------------------- */
+.sobre-el-vendedor{
+    background-color: var(--colorFondo-oscuro);
+    font-size: 1.2em;
+    padding-left: 9em;
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 5em;
+    padding-top: 2em;
+}
+
 /* estilos para computadora */
 @media (max-width: 690px){
     body{

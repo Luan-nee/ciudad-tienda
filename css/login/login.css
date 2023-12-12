@@ -1,18 +1,24 @@
 :root{
-    --tamanio-formX: 100vw;
     --background-from: #222f3a;
 }
 *{
     padding: 0px;
     margin: 0px;
+} 
+.conteiner-login-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 /* --------estilos para el formulario-------- */
 .formulario_registroSecion{
     background-color: var(--background-from);
-    width: var(--tamanio-formX);
     color: white;
     display: grid;
     gap: 1em;
+    border-radius: 1em; 
+    padding: 1em;
 }
 .title_form{
     text-align: center;
@@ -23,7 +29,6 @@
 .form_input{
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
-    background-color: none;
     padding: 0.4em 1.2em;
     font-size: 1.3em;
     border-radius: 0.5em;
@@ -41,8 +46,18 @@
 
     border-style: none;
 }
+
+form a{
+    font-size: 1.3em;
+    color:orange;
+    text-align: end;
+    padding-right: 1em;
+    text-decoration: underline;
+}
+
 /* --------estilos para el puppet-------- */
 .puppet_login{
+    display: none;
     background-color: rgb(36, 36, 36);
     width: 500px;
     padding: 1em;
@@ -58,4 +73,16 @@
     font-size: 1.2em;
     font-family:Arial, Helvetica, sans-serif;
     color:white;
+}
+
+/* responsive */
+@media (width <= 390px){
+    body{
+        font-size: 10px;
+    }
+}
+@media (width <= 272px){
+    body{
+        font-size: 8px;
+    }
 }
