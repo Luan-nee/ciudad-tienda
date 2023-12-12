@@ -6,10 +6,10 @@
 <body>
     <?php include("../reutilizable/header.php"); ?>
     <section class="apartado-buscador">
-        <label class="conteiner-search" for="buscador">
+        <form class="conteiner-search">
             <input type="search" id="buscador" placeholder="Buscar producto..">
             <img src="../../img/icono/lupa.png" alt="">
-        </label>
+        </form>
     </section>
     <section id="conteinerProducto" class="conteiner-AllProduct">
         <?php for ($i=0; $i < 14; $i++) { ?>

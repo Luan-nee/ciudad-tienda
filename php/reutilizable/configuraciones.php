@@ -1,4 +1,7 @@
+
 <?php
+    include("conexion.php");
+    
     // esta array contienen todas las direcciones para enlazar el 
     // css con el archivo .php
     $direccion_css = "../../css/";

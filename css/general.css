@@ -1,5 +1,5 @@
 :root{
-    --colorFondo-claro: #23313c;
+    --colorFondo-claro: #23313ce1;
     --colorFondo-oscuro: #0f161c;
     --colorFondo: #0f161c;
     --colorTextImportante: purple;
@@ -13,7 +13,7 @@
     margin: 0px;
 }
 body{
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/space.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -107,4 +107,15 @@ ul{
 /* estilos aplicados con javascript */
 .aparecer-grid{
     display: grid;
+}
+/* modificaciones respecto al tamañano de pantalla */
+@media (width < 792px){
+    body{
+        background-image: url(../img/fondo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 }

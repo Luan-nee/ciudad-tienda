@@ -26,14 +26,14 @@
             </h1>
             
             <?php if($_GET && $_GET['modo'] == "registro"){ ?>
-                <input class="form_input color_inputText" type="text" placeholder="nombre_user">
-                <input class="form_input color_inputText" type="email" placeholder="correo@eléctronico.com">
-                <input class="form_input color_inputText" type="number" placeholder="numero de celular">
-                <input class="form_input color_inputText" type="password" placeholder="nueva_contraseña">
-                <input class="form_input color_inputText" type="password" placeholder="verificar_contraseña">
+                <input class="form_input color_inputText" type="text" minlength="2" maxlength="50" placeholder="nombre_user">
+                <input class="form_input color_inputText" type="email" minlength="2" maxlength="50" placeholder="correo@eléctronico.com">
+                <input class="form_input color_inputText" type="number" min="900000000" max="999999999" placeholder="numero de celular">
+                <input class="form_input color_inputText" type="password" minlength="8" maxlength="20" placeholder="nueva_contraseña">
+                <input class="form_input color_inputText" type="password" minlength="8" maxlength="20" placeholder="verificar_contraseña">
             <?php }else{ ?>
-                <input class="form_input color_inputText" type="email" placeholder="correo@eléctronico.com">
-                <input class="form_input color_inputText" type="password" placeholder="contraseña">
+                <input class="form_input color_inputText" type="email" minlength="2" maxlength="50" placeholder="correo@eléctronico.com">
+                <input class="form_input color_inputText" type="password" minlength="8" maxlength="20" placeholder="nueva_contraseña">
             <?php } ?>
             <input class="form_input btn_submit" type="submit" value="enviar">
             

@@ -40,7 +40,7 @@
 }
 .conteiner-search img{
     background-color: var(--colorFondo-claro);
-    height: calc(var(--tamSearchY) - 1em) ;
+    height: calc(var(--tamSearchY) - 1em);
     object-fit: cover;
     border-style: solid;
     padding: 0.3em;
