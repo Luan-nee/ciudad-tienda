@@ -1,5 +1,7 @@
 
 <?php
+    session_start();
+
     include("conexion.php");
     
     // esta array contienen todas las direcciones para enlazar el 
