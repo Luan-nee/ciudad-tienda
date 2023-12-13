@@ -2,10 +2,10 @@
     //datos a obtener cuando ingrese a la pagina
     include("../reutilizable/configuraciones.php"); 
 
-    // if( isset($_GET['cerraSecion']) && $_GET['cerraSecion'] == true){
-    //     session_destroy();
-    //     echo "</br> array global destruido";
-    // }
+    if( isset($_GET['cerraSecion']) && $_GET['cerraSecion'] == true){
+        session_destroy();
+        echo "array global destruido";
+    }
 
     if($_POST){
         if($_POST['btn_submit'] == "Registrarse"){
@@ -18,7 +18,7 @@
             // codigo...
 
             $usuario -> guardar_user($name_user, $celular, $email, $password);
-            $_SESSION['email-user'] = $email; //identificado único provicional
+            $_SESSION['email-user'] = $email; //identificador único provicional
             header("location: ../explorar/explorar.php");
 
         }else if($_POST['btn_submit'] == "Iniciar Sesion"){
@@ -27,13 +27,15 @@
             if($listUsuarios){
                 foreach($listUsuarios as $list){
                     if($list['email'] == $_POST['regis_email'] && $list['password'] == $_POST['regis_password']){
+                        echo "datos correctos";
+                        $_SESSION['email-user'] = $email; //identificador único provicional
                         header("location: ../explorar/explorar.php");
-                        $_SESSION['email-user'] = $email; //identificado único provicional
                     }
                 }
             }
         }
 
+    }else{
         // mostrando el error
         echo "datos incorrectos";
     }

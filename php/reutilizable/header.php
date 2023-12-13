@@ -1,3 +1,7 @@
+<?php if( !isset($_SESSION['email-user']) ){
+    header("location: ../login/iniciar_secion.php");
+} ?>
+
 <section class="header_section">
     <nav class="header_nav">
         <!-- el link es momentaneo -->
@@ -26,7 +30,7 @@
                 style="
                 background-color: #c12424;
                 color:white;" 
-                href="../login/iniciar_secion.php?cerraSecion=true">Cerrar sessión</a>
+                href="../login/iniciar_secion.php?modo=registro&cerraSecion=true">Cerrar sessión</a>
             </li>
         </ul> 
     </nav>
