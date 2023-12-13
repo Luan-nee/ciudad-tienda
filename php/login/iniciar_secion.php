@@ -1,12 +1,8 @@
 <?php
-    //datos a obtener cuando ingrese a la pagina
     include("../reutilizable/configuraciones.php"); 
-
-    if( isset($_GET['cerraSecion']) && $_GET['cerraSecion'] == true){
-        session_destroy();
-        echo "array global destruido";
-    }
-
+    
+    
+    //datos a obtener cuando ingrese a la pagina
     if($_POST){
         if($_POST['btn_submit'] == "Registrarse"){
             $name_user = isset($_POST['regis_nameUser'])?$_POST['regis_nameUser']:"";
@@ -33,11 +29,14 @@
                     }
                 }
             }
+        }else{
+            echo "ocurrió un error al recibir los dato";
         }
+    }
 
-    }else{
-        // mostrando el error
-        echo "datos incorrectos";
+    if( isset($_GET['cerraSecion']) && $_GET['cerraSecion'] == true){
+        session_destroy();
+        echo "array global destruido";
     }
 ?>
     <title>
