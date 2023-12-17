@@ -4,10 +4,16 @@
     <script defer src="js/menu.js"></script>
 </head>
 <body>
-    <?php include("../reutilizable/header.php"); ?>
-    <!-- <?php//include("../login/iniciar_secion.php"); ?> -->
+    <?php include("../reutilizable/header.php");
+    $datos_user = $SQL_BDD -> getUserId('user' , $_SESSION['id_user']);
+    print_r($datos_user);
+    ?>
     <section class="header_title">
-        <h2>NOMBRE DEL USUARIO</h2>
+        <h2>
+            <?php 
+            echo $datos_user[0]['nombre'];
+            ?>
+        </h2>
     </section>
     <section class="conteiner-All">
         <section class="sub-head">
@@ -17,8 +23,12 @@
                 </div>
                 <section class="datos_sub-head">
                     <!-- los estilos asignados no son de importancia -->
-                    <h3 class="--numProduc">12345</h3>
-                    <h3 class="--numSegui">54321</h3>
+                    <h3 class="--numProduc">
+                        <?php echo $datos_user[0]['seguidores']; ?>
+                    </h3>
+                    <h3 class="--numSegui">
+                        <?php echo $datos_user[0]['seguidores']; ?>
+                    </h3>
                     <p>Productos</p>
                     <p>Seguidores</p>
                 </section>
@@ -59,15 +69,21 @@
             <section style="display:none;" id="section_dataUser" class="sobre-el-vendedor">
                 <label for="">
                     <h3>Nombre:</h3>
-                    <p>luan del sol huillca sánchez</p>
+                    <p>
+                        <?php echo $datos_user[0]['nombre']; ?>
+                    </p>
                 </label>
                 <label for="">
                     <h3>Correo Eléctronico:</h3>
-                    <p>luandelsol54@gmail.com</p>
+                    <p>
+                        <?php echo $datos_user[0]['email']; ?>
+                    </p>
                 </label>
                 <label for="">
                     <h3>Numero de celular:</h3>
-                    <p>900210102</p>
+                    <p>
+                        <?php echo $datos_user[0]['celular']; ?>
+                    </p>
                 </label>
             </section>
 

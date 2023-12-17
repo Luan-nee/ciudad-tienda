@@ -19,7 +19,7 @@ let padreTem= {
 };
 let flap = 0;
 let contador = 0;
-let separacion = 25; //separación con respecto al producto
+let separacion = 20; //separación con respecto al producto
 conteninerProduct.addEventListener("click", (e)=>{
     if(e.target.attributes[0].value=='botonObtener'){
         return;

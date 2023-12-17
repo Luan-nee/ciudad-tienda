@@ -28,7 +28,7 @@
                 style="
                 background-color: #c12424;
                 color:white;" 
-                href="../login/iniciar_secion.php?modo=registro&cerraSecion=true">Cerrar sessión</a>
+                href="../login/iniciar_secion.php?cerraSecion=true">Cerrar sessión</a>
             </li>
         </ul> 
     </nav>

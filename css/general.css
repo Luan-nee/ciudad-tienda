@@ -1,5 +1,5 @@
 :root{
-    --colorFondo-claro: #23313cd1;
+    --colorFondo-claro: #23313cab;
     --colorFondo-oscuro: #0f161c;
     /* --colorFondo-oscuro: #151f28; */
     --colorFondo: #0f161c;
@@ -14,8 +14,10 @@
     margin: 0px;
 }
 body{
-    background-image: url(../img/space.jpg);
+    /* background-image: url(../img/space.jpg); */
+    background-image: url(../img/gif/spacio.gif);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -112,7 +114,7 @@ ul{
 /* modificaciones respecto al tamañano de pantalla */
 @media (width < 792px){
     body{
-        background-image: url(../img/fondo.jpg);
+        background-image: url(../img/gif/carretera.gif);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;

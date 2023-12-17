@@ -15,6 +15,8 @@ class bdd{
         }
     }
 
+###### TODO REFERENTE A LA TABLA USUARIO
+
     public function getTable($tabla){
         $sql = "SELECT * FROM $tabla";
         $sentencia = $this->conexion -> prepare($sql);
@@ -22,7 +24,6 @@ class bdd{
         return $sentencia -> fetchAll();
     }
 
-    //falta testear
     public function save_user($table, $nombre, $celular, $email, $password, $seguidores = 0){
         if(strpos($email, "@") && strpos($email, ".")){
             $sql = "INSERT INTO `$table` (`nombre`, `email`, `celular`, `password`, `seguidores`) 
@@ -33,22 +34,31 @@ class bdd{
         }
     }
 
-    public function get_user($table, $id){
-        $sql = "SELECT * FROM `$table` WHERE id = `$id`";
-        $sentencia = $this->conexion -> prepare();
-        $sentencia -> execute();
-        return $sentencia -> fetchAll();
-    }
-    public function getUser($tabla , $email){
-        $sql = "SELECT * FROM $tabla WHERE email='$email' ";
+    public function getUserEmail($tabla , $email){
+        $sql = "SELECT * FROM $tabla WHERE email = '$email' ";
         $sentencia = $this->conexion -> prepare($sql);
         $sentencia -> execute();
         return $sentencia -> fetchAll();
     }
+    public function getUserId($tabla , $id){
+        $sql = "SELECT * FROM $tabla WHERE id = '$id' ";
+        $sentencia = $this->conexion -> prepare($sql);
+        $sentencia -> execute();
+        return $sentencia -> fetchAll();
+    }
+
+
+    ###### TODO REFERENTE A LA TABLA PRODUCTO
+    public function save_producto($nombre, $precio, $descripcion, $foto){
+        $bits_foto = addslashes(file_get_contents($foto['img_product']['tmp_name']));
+        $sql = "INSERT INTO producto (nombre, precio, descripcion, foto) VALUES ('$nombre', '$precio', '$descripcion', '$foto')";
+        $this->conexion -> exec($sql);
+    }
 }
 
 $SQL_BDD = new bdd;
-
+$SQL_BDD -> save_producto($nombre, $precio, $descripcion, $foto);
+// $SQL_BDD -> getUser($tabla , $email);
 // print_r($usuario -> getUser("usuarios","luandelsol54@gmail.com"));
 // $usuario -> guardar_user("luannnn", "999","emaillll", "123456789");
 // print_r($usuario->usuarios("usuarios"));
