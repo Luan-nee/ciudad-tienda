@@ -1,6 +1,7 @@
 :root{
-    --colorFondo-claro: #23313ce1;
+    --colorFondo-claro: #23313cd1;
     --colorFondo-oscuro: #0f161c;
+    /* --colorFondo-oscuro: #151f28; */
     --colorFondo: #0f161c;
     --colorTextImportante: purple;
     --fondo-btn: #ba03ba;

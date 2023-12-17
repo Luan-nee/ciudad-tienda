@@ -1,47 +1,54 @@
 <?php 
 class bdd{
-    public $conexion;
+    private $conexion;
+    private $server = "localhost";
+    private $user = "root";
+    private $password = "";
+    private $bdd = "ciudad";
 
-    function __construct($Pserver, $Pbdd, $Puser, $Ppassword){
+    function __construct(){
         try{
-            $this->conexion = new PDO("mysql:host=$Pserver; dbname=$Pbdd",$Puser,$Ppassword);
+            $this->conexion = new PDO("mysql:host=$this->server; dbname=$this->bdd",$this->user,$this->password);
             $this->conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "conexion establecida";
         }catch(Exception $error){
             echo $error;
         }
     }
 
-    public function usuarios($tabla){
+    public function getTable($tabla){
         $sql = "SELECT * FROM $tabla";
         $sentencia = $this->conexion -> prepare($sql);
         $sentencia -> execute();
         return $sentencia -> fetchAll();
     }
 
-    public function guardar_user($nombre, $celular, $email, $password){
-        $sql = "INSERT INTO `usuarios` (`id`, `nombre`, `celular`, `email`, `password`) 
-        VALUES (NULL, '$nombre', '$celular', '$email', '$password')";
-        $resultado = $this->conexion -> exec($sql);
-        if($resultado){
-            echo "los datos fueron guardados";
+    //falta testear
+    public function save_user($table, $nombre, $celular, $email, $password, $seguidores = 0){
+        if(strpos($email, "@") && strpos($email, ".")){
+            $sql = "INSERT INTO `$table` (`nombre`, `email`, `celular`, `password`, `seguidores`) 
+            VALUES ('$nombre', '$email', '$celular', '$password', '$seguidores')";
+            $this->conexion -> exec($sql);
         }else{
-            echo "no se guardaron los datos";
+            echo "este correo no es valido: ".$email;
         }
     }
 
-    public function getUser($tabla ,$email){
+    public function get_user($table, $id){
+        $sql = "SELECT * FROM `$table` WHERE id = `$id`";
+        $sentencia = $this->conexion -> prepare();
+        $sentencia -> execute();
+        return $sentencia -> fetchAll();
+    }
+    public function getUser($tabla , $email){
         $sql = "SELECT * FROM $tabla WHERE email='$email' ";
         $sentencia = $this->conexion -> prepare($sql);
         $sentencia -> execute();
         return $sentencia -> fetchAll();
     }
-    // public function iniciar_sesion($correo, ){
-
-    // }
 }
 
-$usuario = new bdd("localhost","ciudad","root", "");
+$SQL_BDD = new bdd;
+
 // print_r($usuario -> getUser("usuarios","luandelsol54@gmail.com"));
 // $usuario -> guardar_user("luannnn", "999","emaillll", "123456789");
 // print_r($usuario->usuarios("usuarios"));

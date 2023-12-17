@@ -19,10 +19,12 @@ let padreTem= {
 };
 let flap = 0;
 let contador = 0;
-
+let separacion = 25; //separación con respecto al producto
 conteninerProduct.addEventListener("click", (e)=>{
+    if(e.target.attributes[0].value=='botonObtener'){
+        return;
+    }
     contador++;
-    
     if(padreAc.id != padreTem.id){
         padreTem.id = padreAc.id;
         padreTem.element = padreAc.element;
@@ -54,11 +56,11 @@ conteninerProduct.addEventListener("click", (e)=>{
     console.log("ID del elemento temporal : " + elemenTemp.id);
 
     if(elemenTemp.id == elementoActual.id  || elemenTemp.id == ""){
-        elementoActual.element.style.right = "-" + (elementoActual.width + 5) + "px";
+        elementoActual.element.style.right = "-" + (elementoActual.width + separacion) + "px";
         elementoActual.element.style.opacity = "1";
         flap++;
     }else{
-        elementoActual.element.style.right = "-" + (elementoActual.width + 5) + "px";
+        elementoActual.element.style.right = "-" + (elementoActual.width + separacion) + "px";
         elementoActual.element.style.opacity = "1";
 
         elemenTemp.element.style.right = "0px";

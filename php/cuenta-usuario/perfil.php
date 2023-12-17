@@ -1,15 +1,14 @@
-<?php 
-    if($_GET){
-        $verwhat = isset($_GET["verwhat"])?$_GET["verwhat"]:"producto";
-    }
-?>
-<?php include("../reutilizable/configuraciones.php"); ?>
-    <title>Registro Producto</title>
+<?php include("../reutilizable/configuraciones.php");?>
+    <title>Perfil</title>
     <link rel="stylesheet" href="<?php echo $list_css['perfil'];?>">
+    <script defer src="js/menu.js"></script>
 </head>
 <body>
     <?php include("../reutilizable/header.php"); ?>
     <!-- <?php//include("../login/iniciar_secion.php"); ?> -->
+    <section class="header_title">
+        <h2>NOMBRE DEL USUARIO</h2>
+    </section>
     <section class="conteiner-All">
         <section class="sub-head">
             <label>
@@ -32,15 +31,14 @@
 
         <section class="conteiner-nav">
             <nav>
-                <a href="perfil.php?verwhat=producto">producto</a>
-                <a href="perfil.php?verwhat=datos-user">sobre el vendedor</a>
+                <a id="link_producto">producto</a>
+                <a id="link_datoUser">sobre el vendedor</a>
             </nav>
         </section>
 
-        <?php if( isset($verwhat) && $verwhat == "producto"){ ?>
-            <section class="conteiner-producto">
+            <section id="section_producto" class="conteiner-producto">
             <!-- inicio de la estructura de los productos -->
-                <?php for ($i=0; $i < 1; $i++) { ?>
+                <?php for ($i=0; $i < 5; $i++) { ?>
                     <article class="producto">
                         <!-- img momentanea -->
                         <img src="../../img/img-gato.jpg" alt=""> 
@@ -56,9 +54,9 @@
                 <?php } ?>
             <!-- fin de la estructura -->
             </section>
-        <?php }else if(isset($verwhat) && $verwhat == "datos-user" ){ ?>
+
             <!-- apartado sobre el vendedor -->
-            <section class="sobre-el-vendedor">
+            <section style="display:none;" id="section_dataUser" class="sobre-el-vendedor">
                 <label for="">
                     <h3>Nombre:</h3>
                     <p>luan del sol huillca sánchez</p>
@@ -72,9 +70,7 @@
                     <p>900210102</p>
                 </label>
             </section>
-        <?php }else{
 
-        } ?>
     </section>
 </body>
 </html>

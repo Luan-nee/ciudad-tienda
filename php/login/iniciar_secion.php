@@ -1,7 +1,6 @@
 <?php
     include("../reutilizable/configuraciones.php"); 
     
-    
     //datos a obtener cuando ingrese a la pagina
     if($_POST){
         if($_POST['btn_submit'] == "Registrarse"){
@@ -9,12 +8,12 @@
             $email = isset($_POST['regis_email'])?$_POST['regis_email']:"";
             $celular = isset($_POST['regis_celular'])?$_POST['regis_celular']:"";
             $password = isset($_POST['regis_password'])?$_POST['regis_password']:"";
-
+            
             // comprobar que los datos cumples con los requisitos
             // codigo...
-
-            $usuario -> guardar_user($name_user, $celular, $email, $password);
+            $table = "user";
             $_SESSION['email-user'] = $email; //identificador único provicional
+            $SQL_BDD -> save_user($table, $name_user, $celular, $email, $password, $seguidores = 0);
             header("location: ../explorar/explorar.php");
 
         }else if($_POST['btn_submit'] == "Iniciar Sesion"){

@@ -32,8 +32,4 @@
             </li>
         </ul> 
     </nav>
-
-    <section class="header_title">
-        <h1>Registrar Producto</h1>
-    </section>
 </section>

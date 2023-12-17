@@ -1,15 +1,15 @@
 
 /* -----Estilos para el header---------- */
 .header_title{
-    padding-top: calc(var(--tamFoto-user)/4);
+    padding-top: calc(var(--tamFoto-user)/3);
     padding-left: calc(var(--tamFoto-user)/0.9);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     color: white;
 }
-.header_title h1{
-    font-size: 2.7em;
+.header_title h2{
+    font-size: 2.2em;
 }
 .header_title p{
     display: flex;
@@ -96,6 +96,7 @@
     text-align: center;
 }
 .conteiner-nav nav a{
+    cursor: pointer;
     font-size: 1.2em;
     margin: .5em;
     background-color: var(--colorFondo-claro);

@@ -4,6 +4,9 @@
 </head>
 <body>
     <?php include("../reutilizable/header.php"); ?>
+    <section class="header_title">
+        <h2>Registrar Producto</h2>
+    </section>
     <section class="conteiner-form">
         <form class="formulario-producto" action="">
             <section class="foto-producto">

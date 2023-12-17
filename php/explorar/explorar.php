@@ -1,10 +1,13 @@
 <?php include("../reutilizable/configuraciones.php"); ?>
-    <title>Perfil-User</title>
+    <title>Explorar</title>
     <link rel="stylesheet" href="<?php echo $list_css['explorar'];?>">
     <script defer src="js/mostrar-description.js"></script>
 </head>
 <body>
     <?php include("../reutilizable/header.php"); ?>
+    <section class="header_title">
+        <h2>EXPLORAR</h2>
+    </section>
     <section class="apartado-buscador">
         <form class="conteiner-search">
             <input type="search" id="buscador" placeholder="Buscar producto..">
@@ -28,13 +31,22 @@
                 <div class="window-informacion-producto" value="<?php echo $i+1; ?>"></div>
                 <!-- descripción del producto -->
                 <div class="description-producto">
-                    <p>
-                        lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, corrupti. Lorem ipsum dolor  magni id. Atque nemo libero odio.
-                    </p>
+                    <label>
+                        <h4>Descripción:</h4>
+                        <p>
+                            lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, corrupti. Lorem ipsum dolor  magni id. Atque nemo libero odio.
+                        </p>
+                    </label>
                     <footer>
-                        <p>precio: S/300</p>
-                        <p>cantidad: 10 unidades</p>
-                        <a>obtener</a>
+                        <p>
+                            Precio: 
+                            <b>S/300</b>
+                        </p>
+                        <p class="description_cantidad">
+                            Cantidad: 
+                            <b>10 unidades</b>
+                        </p>
+                        <a value="botonObtener">obtener</a>
                     </footer>
                 </div>
             </label>
