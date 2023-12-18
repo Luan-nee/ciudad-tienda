@@ -49,15 +49,21 @@ class bdd{
 
 
     ###### TODO REFERENTE A LA TABLA PRODUCTO
-    public function save_producto($nombre, $precio, $descripcion, $foto){
-        $bits_foto = addslashes(file_get_contents($foto['img_product']['tmp_name']));
-        $sql = "INSERT INTO producto (nombre, precio, descripcion, foto) VALUES ('$nombre', '$precio', '$descripcion', '$foto')";
+    public function save_producto($id_user, $nombre, $precio, $descripcion, $foto){
+        $sql = "INSERT INTO producto (id_user ,nombre, precio, descripcion, foto) VALUES ('$id_user','$nombre', '$precio', '$descripcion', '$foto')";
         $this->conexion -> exec($sql);
+    }
+
+    public function getProductUser($id_user){
+        $sql = "SELECT * FROM producto WHERE id_user = '$id_user'";
+        $sentencia = $this->conexion -> prepare($sql);
+        $sentencia -> execute();
+        return $sentencia->fetchAll();
     }
 }
 
 $SQL_BDD = new bdd;
-$SQL_BDD -> save_producto($nombre, $precio, $descripcion, $foto);
+// $SQL_BDD -> save_producto($nombre, $precio, $descripcion, $foto);
 // $SQL_BDD -> getUser($tabla , $email);
 // print_r($usuario -> getUser("usuarios","luandelsol54@gmail.com"));
 // $usuario -> guardar_user("luannnn", "999","emaillll", "123456789");

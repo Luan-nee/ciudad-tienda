@@ -7,6 +7,9 @@
     <?php include("../reutilizable/header.php");
     $datos_user = $SQL_BDD -> getUserId('user' , $_SESSION['id_user']);
     print_r($datos_user);
+    echo "<hr>";
+    $datos_product = $SQL_BDD -> getProductUser($_SESSION['id_user']);
+    print_r($datos_product); // XD, menudo bug.
     ?>
     <section class="header_title">
         <h2>
@@ -48,18 +51,21 @@
 
             <section id="section_producto" class="conteiner-producto">
             <!-- inicio de la estructura de los productos -->
-                <?php for ($i=0; $i < 5; $i++) { ?>
+                <?php foreach($datos_product as $product){ ?>
                     <article class="producto">
                         <!-- img momentanea -->
-                        <img src="../../img/img-gato.jpg" alt=""> 
-                        <h3>Titulo del producto</h3>
+                        <img src="data:image/jpg;base64,<?php echo base64_decode($product['foto']);?>" alt=""> 
+                        <h3>
+                            <?php echo $product['nombre']; ?>
+                        </h3>
                         <p class="description-producto">
+                            <?php echo $product['descripcion']; ?>
                             <span class="puntSuspensivo">...</span>
                         </p>
                         <footer>
                             <h4>0000KM likes</h4>
                             <h4>0000KM ventas</h4>
-                        </footer>
+                        </footer>   
                     </article>
                 <?php } ?>
             <!-- fin de la estructura -->

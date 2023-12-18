@@ -1,17 +1,24 @@
-
-<?php
-if($_POST){
-    $name_product = (isset($_POST['name_producto']))?$_POST['name_producto']:"";
-    $descrip = (isset($_POST['description']))?$_POST['description']:"";
-    $precio = (isset($_POST['precio']))?$_POST['precio']:"";
-    $img = (isset($_FILES['img_product']))?$_FILES['img_product']:"";
-    
-}
-?>
 <?php include("../reutilizable/configuraciones.php"); ?>
     <title>Registrar Producto</title>
     <link rel="stylesheet" href="<?php echo $list_css['registrarProducto'];?>">
 </head>
+    <?php
+    if($_POST){
+        $name_product = (isset($_POST['name_producto']))?$_POST['name_producto']:"";
+        $descrip = (isset($_POST['description']))?$_POST['description']:"";
+        $precio = (isset($_POST['precio']))?$_POST['precio']:"";
+        // $img = (isset($_FILES['img_product']))?$_FILES['img_product']:"";
+
+        $img = addslashes(file_get_contents($_FILES['img_product']['tmp_name']));
+        print_r($_FILES['img_product']);
+        if($_FILES['img_product']['size'] > 3*1024*1024){
+            echo "<script> alert('EL ARCHIVO ES SUPERIOR A 3MB')</script>";
+        }else{
+            $SQL_BDD -> save_producto($_SESSION['id_user'],$name_product, $precio, $descrip, $img);
+            echo "<script> alert('PRODUCTO ALMACENADO')</script>";
+        }
+    }
+    ?>
 <body>
     <?php include("../reutilizable/header.php"); ?>
     <section class="header_title">
