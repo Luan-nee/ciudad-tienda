@@ -6,10 +6,12 @@
 <body>
     <?php include("../reutilizable/header.php");
     $datos_user = $SQL_BDD -> getUserId('user' , $_SESSION['id_user']);
-    print_r($datos_user);
-    echo "<hr>";
     $datos_product = $SQL_BDD -> getProductUser($_SESSION['id_user']);
-    print_r($datos_product); // XD, menudo bug.
+    $numero_product = $SQL_BDD -> numProductUser($_SESSION['id_user']);
+    // echo "<hr>";
+    // print_r($numero_product);
+    // print_r($datos_user);
+    // print_r($datos_product); // XD, menudo bug.
     ?>
     <section class="header_title">
         <h2>
@@ -27,7 +29,7 @@
                 <section class="datos_sub-head">
                     <!-- los estilos asignados no son de importancia -->
                     <h3 class="--numProduc">
-                        <?php echo $datos_user[0]['seguidores']; ?>
+                        <?php echo $numero_product[0]['cantidad']; ?>
                     </h3>
                     <h3 class="--numSegui">
                         <?php echo $datos_user[0]['seguidores']; ?>
@@ -54,7 +56,7 @@
                 <?php foreach($datos_product as $product){ ?>
                     <article class="producto">
                         <!-- img momentanea -->
-                        <img src="data:image/jpg;base64,<?php echo base64_decode($product['foto']);?>" alt=""> 
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($product['foto']);?>" alt=""> 
                         <h3>
                             <?php echo $product['nombre']; ?>
                         </h3>
@@ -63,8 +65,8 @@
                             <span class="puntSuspensivo">...</span>
                         </p>
                         <footer>
-                            <h4>0000KM likes</h4>
-                            <h4>0000KM ventas</h4>
+                            <h4>0000 likes</h4>
+                            <h4>0000 ventas</h4>
                         </footer>   
                     </article>
                 <?php } ?>

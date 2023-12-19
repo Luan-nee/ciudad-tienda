@@ -53,7 +53,12 @@ class bdd{
         $sql = "INSERT INTO producto (id_user ,nombre, precio, descripcion, foto) VALUES ('$id_user','$nombre', '$precio', '$descripcion', '$foto')";
         $this->conexion -> exec($sql);
     }
-
+    public function numProductUser($id){
+        $sql = "SELECT count(id) AS 'cantidad' FROM producto where id_user=$id group by id_user;";
+        $sentencia = $this->conexion -> prepare($sql);
+        $sentencia -> execute();
+        return $sentencia -> fetchAll();
+    }
     public function getProductUser($id_user){
         $sql = "SELECT * FROM producto WHERE id_user = '$id_user'";
         $sentencia = $this->conexion -> prepare($sql);
@@ -63,6 +68,7 @@ class bdd{
 }
 
 $SQL_BDD = new bdd;
+// $SQL_BDD -> numProductUser($id);
 // $SQL_BDD -> save_producto($nombre, $precio, $descripcion, $foto);
 // $SQL_BDD -> getUser($tabla , $email);
 // print_r($usuario -> getUser("usuarios","luandelsol54@gmail.com"));

@@ -133,6 +133,8 @@
 }
 .description-producto{
     position: relative;
+    max-height: 150px;
+    overflow: auto;
     font-size: 1.3em;
 }
 .puntSuspensivo{

@@ -16,13 +16,15 @@
 
             $_SESSION['email-user'] = $email; //identificador único provicional
             $SQL_BDD -> save_user("user", $name_user, $celular, $email, $password, $seguidores = 0);
+            $datosUser = $SQL_BDD -> getUserEmail("user",$email);
+            $_SESSION['id_user'] = $datosUser[0]['id']; //identificador único provicional
             header("location: ../explorar/explorar.php");
 
         }else if($_POST['btn_submit'] == "login"){
             // verificar si las credenciales son correctas
             $email = isset($_POST['regis_email'])?$_POST['regis_email']:"";
             $password = isset($_POST['regis_password'])?$_POST['regis_password']:"";
-            $datosUser = $SQL_BDD -> getUserEmail("user","luandelsol54@gmail.com");
+            $datosUser = $SQL_BDD -> getUserEmail("user",$email);
 
             if($datosUser && $datosUser[0]['email'] == $email && $datosUser[0]['password'] == $password){
                 $_SESSION['id_user'] = $datosUser[0]['id']; //identificador único provicional
