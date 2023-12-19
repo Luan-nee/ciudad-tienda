@@ -9,9 +9,9 @@ create table user(
     seguidores int,
     PRIMARY KEY (id)
 );
-DROP table user;
-SELECT * FROM user;
-SELECT * FROM user where email = 'luandelsol54@gmail.com';
+
+INSERT INTO user (nombre,email,celular,password,seguidores) values 
+('luan del sol huillca sánchez','luandelsol@gmail.com','900210102','12345678',0);
 
 create table producto(
 	id int auto_increment not null,
@@ -37,13 +37,6 @@ create table user_producto(
 DROP TABLE user;
 DROP TABLE user_producto;
 DROP TABLE producto;
-    
-INSERT INTO producto (nombre, precio, descripcion, foto) VALUES 
-('', ,'',''),
-(),
-(),
-(),
-();
 
 SELECT * FROM user;
 SELECT * FROM producto;
