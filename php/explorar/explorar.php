@@ -4,7 +4,10 @@
     <script defer src="js/mostrar-description.js"></script>
 </head>
 <body>
-    <?php include("../reutilizable/header.php"); ?>
+    <?php include("../reutilizable/header.php"); 
+    $datos_product = $SQL_BDD-> getProductUser($_SESSION['id_user']);
+    // print_r($datos_product);
+    ?>
     <section class="header_title">
         <h2>EXPLORAR</h2>
     </section>
@@ -15,10 +18,15 @@
         </form>
     </section>
     <section id="conteinerProducto" class="conteiner-AllProduct">
-        <?php for ($i=0; $i < 14; $i++) { ?>
+        <?php
+        foreach($datos_product as $product) { ?>
             <label style="position:relative;" value="<?php echo $i+1; ?>">
                 <article class="producto">
-                    <h3>nombre del producto</h3>
+                    <h3>
+                        <?php 
+                        echo $product['nombre'];
+                        ?>
+                    </h3>
                     <!-- restricción al tamaño vertical de la imagen -->
                     <!-- <img src="../../img/img-raro.jpg" alt=""> -->
                     <img src="../../img/img-gato2.jpg" alt="">
@@ -34,13 +42,20 @@
                     <label>
                         <h4>Descripción:</h4>
                         <p>
-                            lore Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, corrupti. Lorem ipsum dolor  magni id. Atque nemo libero odio.
+                            <?php
+                            echo $product['descripcion'];
+                            ?>
                         </p>
                     </label>
                     <footer>
                         <p>
                             Precio: 
-                            <b>S/300</b>
+                            <b>
+                                S/
+                                <?php 
+                                echo $product['precio'];
+                                ?>
+                            </b>
                         </p>
                         <p class="description_cantidad">
                             Cantidad: 

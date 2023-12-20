@@ -65,8 +65,10 @@
                             <span class="puntSuspensivo">...</span>
                         </p>
                         <footer>
-                            <h4>0000 likes</h4>
-                            <h4>0000 ventas</h4>
+                            <h4>
+                                Precio: 
+                                <?php echo $product['precio']; ?>
+                            </h4>
                         </footer>   
                     </article>
                 <?php } ?>
