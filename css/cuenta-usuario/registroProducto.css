@@ -73,12 +73,31 @@
     font-size: 1.3em;
     padding: 0.3em;
     text-align: center;
+    text-align: start;
 }
 .datos-producto input[type="submit"]{
     cursor: pointer;
     border-radius: 0.5em;
     margin-top: 1em;
     background-color: var(--fondo-btn);
+}
+.input_precio{
+    text-align: start;
+}
+.datos-producto div[class="dato-precio"]{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.datos-producto select{
+    width: 100%;
+    outline: none;
+    border-radius: 0.5em;
+    background-color: var(--colorFondo-oscuro);
+    color: white;
+    padding: 0.8em;
 }
 /* responsive */
 @media (width <= 560px){

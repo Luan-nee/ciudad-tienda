@@ -29,7 +29,7 @@
                     </h3>
                     <!-- restricción al tamaño vertical de la imagen -->
                     <!-- <img src="../../img/img-raro.jpg" alt=""> -->
-                    <img src="../../img/img-gato2.jpg" alt="">
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($product['foto']);?>" alt="">
                 </article>
                 <a class="direction-perfil-vendedor" href="../cuenta-usuario/perfil.php?correo=1">
                     <div class="img-vendedor">

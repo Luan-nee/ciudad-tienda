@@ -46,7 +46,7 @@
 
         <section class="conteiner-nav">
             <nav>
-                <a id="link_producto">producto</a>
+                <a style="background-color:#151f28;" id="link_producto">producto</a>
                 <a id="link_datoUser">sobre el vendedor</a>
             </nav>
         </section>

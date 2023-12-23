@@ -49,8 +49,9 @@ class bdd{
 
 
     ###### TODO REFERENTE A LA TABLA PRODUCTO
-    public function save_producto($id_user, $nombre, $precio, $descripcion, $foto){
-        $sql = "INSERT INTO producto (id_user ,nombre, precio, descripcion, foto) VALUES ('$id_user','$nombre', '$precio', '$descripcion', '$foto')";
+    public function save_producto($id_user, $nombre, $description, $foto, $unidad_medida, $unidad_precio, $precio_por_mayor, $stock){
+        $sql = "INSERT INTO producto (id_user, nombre, description, foto, unidad_medida, unidad_precio, precio_por_mayor, stock) 
+        VALUE ('$id_user', '$nombre', '$description', '$foto', '$unidad_medida', $unidad_precio, $precio_por_mayor, $stock)";
         $this->conexion -> exec($sql);
     }
     public function numProductUser($id){

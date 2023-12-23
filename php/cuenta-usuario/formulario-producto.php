@@ -3,18 +3,18 @@
     <link rel="stylesheet" href="<?php echo $list_css['registrarProducto'];?>">
 </head>
     <?php
+    $_SESSION['id_user'] = 1; // asignación momentanea
     if($_POST){
-        $name_product = (isset($_POST['name_producto']))?$_POST['name_producto']:"";
-        $descrip = (isset($_POST['description']))?$_POST['description']:"";
+        $nombre = (isset($_POST['name_producto']))?$_POST['name_producto']:"";
+        $description = (isset($_POST['description']))?$_POST['description']:"";
         $precio = (isset($_POST['precio']))?$_POST['precio']:"";
-        // $img = (isset($_FILES['img_product']))?$_FILES['img_product']:"";
-
         $img = addslashes(file_get_contents($_FILES['img_product']['tmp_name']));
-        print_r($_FILES['img_product']);
+        
         if($_FILES['img_product']['size'] > 3*1024*1024){
             echo "<script> alert('EL ARCHIVO ES SUPERIOR A 3MB')</script>";
         }else{
             $SQL_BDD -> save_producto($_SESSION['id_user'],$name_product, $precio, $descrip, $img);
+            $SQL_BDD -> save_producto($_SESSION['id_user'], $nombre, $description, $foto, $unidad_medida, $unidad_precio, $precio_por_mayor, $stock);
             echo "<script> alert('PRODUCTO ALMACENADO')</script>";
         }
     }
@@ -35,7 +35,14 @@
             <section class="datos-producto">
                 <input type="text" name="name_producto" id="" placeholder="nombre del producto">
                 <textarea name="description" id="" cols="30" rows="10" placeholder="descripción del producto"></textarea>
-                <input min="1" type="number" name="precio" id="" placeholder="S/ precio">
+                <div class="dato-precio">
+                    <select name="" id="">
+                        <option value="">litros</option>
+                        <option value="">kilogramos</option>
+                        <option value="">gramos</option>
+                    </select>
+                    <input class="input_precio" type="number" min="1" max="999" name="" placeholder="S/ ">
+                </div>
                 <input type="submit" value="publicar producto">
             </section>
         </form>
