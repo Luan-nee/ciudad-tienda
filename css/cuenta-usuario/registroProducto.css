@@ -47,7 +47,7 @@
 .label-img:hover{
     box-shadow: 0px 0px 5px white;
 }
-/*-----------estilos para el los datos del producto--------------------------- */
+/*-----------estilos para los datos del producto--------------------------- */
 .datos-producto{
     width: 100%;
     display: flex;
@@ -73,7 +73,6 @@
     font-size: 1.3em;
     padding: 0.3em;
     text-align: center;
-    text-align: start;
 }
 .datos-producto input[type="submit"]{
     cursor: pointer;

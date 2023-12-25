@@ -37,12 +37,14 @@
                 <textarea name="description" id="" cols="30" rows="10" placeholder="descripción del producto"></textarea>
                 <div class="dato-precio">
                     <select name="" id="">
-                        <option value="">litros</option>
-                        <option value="">kilogramos</option>
-                        <option value="">gramos</option>
+                        <option value="">Kilogramos</option>
+                        <option value="">Gramos</option>
+                        <option value="">Litros</option>
+                        <option value="">Mililitros</option>
                     </select>
                     <input class="input_precio" type="number" min="1" max="999" name="" placeholder="S/ ">
                 </div>
+                <input class="conteiner-precio_mayor" type="text" placeholder=" S/ Precio por mayor ">
                 <input type="submit" value="publicar producto">
             </section>
         </form>
