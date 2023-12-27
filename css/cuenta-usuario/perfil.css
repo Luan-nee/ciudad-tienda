@@ -154,8 +154,14 @@
 }
 .producto footer{
     display: flex;
-    align-items: start;
-    gap: 2em;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 0.4em;
+}
+.producto footer p{
+    background-color: var(--colorFondo-claro);
+    padding: 0.3em;
+    border-radius: 0.5em;
 }
 /* -----datos sobre el dueño--------------------------------------- */
 .sobre-el-vendedor{

@@ -31,10 +31,10 @@
                 <section class="datos_sub-head">
                     <!-- los estilos asignados no son de importancia -->
                     <h3 class="--numProduc">
-                        <?php echo $numero_product[0]['cantidad']; ?>
+                        <?php echo (isset($numero_product[0]['cantidad']))?$numero_product[0]['cantidad']:"0"; ?>
                     </h3>
                     <h3 class="--numSegui">
-                        <?php echo $datos_user[0]['seguidores']; ?>
+                        <?php echo (isset($numero_product[0]['seguidores']))?$numero_product[0]['seguidores']:"0"; ?>
                     </h3>
                     <p>Productos</p>
                     <p>Seguidores</p>
@@ -67,10 +67,26 @@
                             <span class="puntSuspensivo">...</span>
                         </p>
                         <footer>
-                            <h4>
+                            <p>
+                                Unidad medida:
+                                <?php echo $product['cantidad_unidad_medida']." ".$product['unidad_medida'] ; ?>
+                            </p>
+                            <p>
                                 Precio: 
                                 <?php echo "S/ ".$product['unidad_precio']; ?>
-                            </h4>
+                            </p>
+                            <p>
+                                Precio por mayor: 
+                                <?php echo "S/ ".$product['precio_por_mayor']; ?>
+                            </p>
+                            <p>
+                                Stock: 
+                                <?php echo $product['stock']." u"; ?>
+                            </p>
+                            <p>
+                                Fecha de publicación:
+                                <?php echo $product['fecha_public']; ?>
+                            </p>
                         </footer>   
                     </article>
                 <?php } ?>

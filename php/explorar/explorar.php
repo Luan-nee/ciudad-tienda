@@ -43,7 +43,7 @@
                         <h4>Descripción:</h4>
                         <p>
                             <?php
-                            echo $product['descripcion'];
+                            echo $product['description'];
                             ?>
                         </p>
                     </label>
@@ -53,7 +53,7 @@
                             <b>
                                 S/
                                 <?php 
-                                echo $product['precio'];
+                                echo $product['unidad_precio'];
                                 ?>
                             </b>
                         </p>
