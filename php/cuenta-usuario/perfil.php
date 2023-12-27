@@ -68,7 +68,7 @@
                         </p>
                         <footer>
                             <p>
-                                Unidad medida:
+                                Cantidad:
                                 <?php echo $product['cantidad_unidad_medida']." ".$product['unidad_medida'] ; ?>
                             </p>
                             <p>

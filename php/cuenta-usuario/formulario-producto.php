@@ -48,12 +48,13 @@
 							<option value="gramos">Gramos</option>
 							<option value="litros">Litros</option>
 							<option value="mililitros">Mililitros</option>
+							<option value="unidad">Unidad</option>
 						</select>
-						<input class="input_precio" type="number" min="1" max="999" name="cantidad_unidad_medida" placeholder="cant.">
+						<input type="number" class="input_precio" min="1" max="999" name="cantidad_unidad_medida" placeholder="cant."  step="0.01"step="0.01">
 				</div>
-				<input type="number" name="costo" min="1" max="999" placeholder="S/ Costo por venta" >
-				<input class="conteiner-precio_mayor" name="precio_mayor" type="number" min="1" max="999" name="stock" placeholder=" S/ Precio por mayor ">
-				<input type="number" min="1" max="999" name="stock" placeholder="stock">
+				<input type="number" step="0.01" name="costo" min="1" max="999" placeholder="S/ Costo por venta" >
+				<input type="number" step="0.01" class="conteiner-precio_mayor" name="precio_mayor" min="1" max="999" name="stock" placeholder=" S/ Precio por mayor ">
+				<input type="number" step="1" min="1" max="999" name="stock" placeholder="stock">
 				<input type="reset" value="limpiar celdas">
 				<input type="submit" value="publicar producto">
 			</section>

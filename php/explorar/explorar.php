@@ -2,9 +2,14 @@
     <title>Explorar</title>
     <link rel="stylesheet" href="<?php echo $list_css['explorar'];?>">
     <script defer src="js/mostrar-description.js"></script>
+    <script defer src="js/enviarDatos.js" ></script>
 </head>
 <body>
     <?php include("../reutilizable/header.php"); 
+    if($_POST){
+        $search = isset($_POST['inputSearch'])?$_POST['inputSearch']:"";
+        $product_search = $SQL_BDD -> buscar($search);
+    }
     $datos_product = $SQL_BDD-> getProductUser($_SESSION['id_user']);
     // print_r($datos_product);
     ?>
@@ -12,14 +17,15 @@
         <h2>EXPLORAR</h2>
     </section>
     <section class="apartado-buscador">
-        <form class="conteiner-search">
-            <input type="search" id="buscador" placeholder="Buscar producto..">
-            <img src="../../img/icono/lupa.png" alt="">
+        <form class="conteiner-search" action="explorar.php" method="post" name="input_search">
+            <input name="inputSearch" type="search" id="inputSearch" placeholder="Buscar producto..">
+            <img id="imgSearch" src="../../img/icono/lupa.png" alt="">
         </form>
     </section>
     <section id="conteinerProducto" class="conteiner-AllProduct">
         <?php
-        foreach($datos_product as $product) { ?>
+            foreach(($_POST)?$product_search:$datos_product as $product) { 
+        ?>
             <label style="position:relative;" value="<?php echo $i+1; ?>">
                 <article class="producto">
                     <h3>

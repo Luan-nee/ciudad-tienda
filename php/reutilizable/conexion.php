@@ -66,9 +66,19 @@ class bdd{
         $sentencia -> execute();
         return $sentencia->fetchAll();
     }
+
+    ####### BUSQUEDA DE PRODUCTOS SEGÚN COMO COMIENZA
+    public function buscar($text){
+        $searchText = $text.'%';
+        $sql = "SELECT * FROM producto WHERE nombre LIKE '$searchText' ";
+        $sentencia = $this->conexion -> prepare($sql);
+        $sentencia -> execute();
+        return $sentencia -> fetchAll();
+    }
 }
 
 $SQL_BDD = new bdd;
+// $SQL_BDD -> buscar($text);
 // $SQL_BDD -> numProductUser($id);
 // $SQL_BDD -> save_producto($nombre, $precio, $descripcion, $foto);
 // $SQL_BDD -> getUser($tabla , $email);
