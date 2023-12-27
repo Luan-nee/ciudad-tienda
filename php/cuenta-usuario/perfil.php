@@ -4,8 +4,10 @@
     <script defer src="js/menu.js"></script>
 </head>
 <body>
+    
     <?php include("../reutilizable/header.php");
-    $datos_user = $SQL_BDD -> getUserId('user' , $_SESSION['id_user']);
+
+    $datos_user = $SQL_BDD -> getUserId($_SESSION['id_user']);
     $datos_product = $SQL_BDD -> getProductUser($_SESSION['id_user']);
     $numero_product = $SQL_BDD -> numProductUser($_SESSION['id_user']);
     // echo "<hr>";
@@ -61,13 +63,13 @@
                             <?php echo $product['nombre']; ?>
                         </h3>
                         <p class="description-producto">
-                            <?php echo $product['descripcion']; ?>
+                            <?php echo $product['description']; ?>
                             <span class="puntSuspensivo">...</span>
                         </p>
                         <footer>
                             <h4>
                                 Precio: 
-                                <?php echo $product['precio']; ?>
+                                <?php echo "S/ ".$product['unidad_precio']; ?>
                             </h4>
                         </footer>   
                     </article>

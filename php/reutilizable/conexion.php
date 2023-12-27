@@ -24,9 +24,9 @@ class bdd{
         return $sentencia -> fetchAll();
     }
 
-    public function save_user($table, $nombre, $celular, $email, $password, $seguidores = 0){
+    public function save_user($nombre, $celular, $email, $password, $seguidores = 0){
         if(strpos($email, "@") && strpos($email, ".")){
-            $sql = "INSERT INTO `$table` (`nombre`, `email`, `celular`, `password`, `seguidores`) 
+            $sql = "INSERT INTO `user` (`nombre`, `email`, `celular`, `password`, `seguidores`) 
             VALUES ('$nombre', '$email', '$celular', '$password', '$seguidores')";
             $this->conexion -> exec($sql);
         }else{
@@ -34,14 +34,14 @@ class bdd{
         }
     }
 
-    public function getUserEmail($tabla , $email){
-        $sql = "SELECT * FROM $tabla WHERE email = '$email' ";
+    public function getUserEmail($email){
+        $sql = "SELECT * FROM `user` WHERE email = '$email' ";
         $sentencia = $this->conexion -> prepare($sql);
         $sentencia -> execute();
         return $sentencia -> fetchAll();
     }
-    public function getUserId($tabla , $id){
-        $sql = "SELECT * FROM $tabla WHERE id = '$id' ";
+    public function getUserId( $id){
+        $sql = "SELECT * FROM user WHERE id = '$id' ";
         $sentencia = $this->conexion -> prepare($sql);
         $sentencia -> execute();
         return $sentencia -> fetchAll();
@@ -49,9 +49,9 @@ class bdd{
 
 
     ###### TODO REFERENTE A LA TABLA PRODUCTO
-    public function save_producto($id_user, $nombre, $description, $foto, $unidad_medida, $unidad_precio, $precio_por_mayor, $stock){
-        $sql = "INSERT INTO producto (id_user, nombre, description, foto, unidad_medida, unidad_precio, precio_por_mayor, stock) 
-        VALUE ('$id_user', '$nombre', '$description', '$foto', '$unidad_medida', $unidad_precio, $precio_por_mayor, $stock)";
+    public function save_producto($id_user, $nombre, $description, $foto, $unidad_medida, $cantidad_unidad_medida, $unidad_precio, $precio_por_mayor, $stock){
+        $sql = " INSERT INTO producto (id_user, nombre, description, foto, unidad_medida, cantidad_unidad_medida, unidad_precio, precio_por_mayor, stock)
+        VALUE ('$id_user', '$nombre', '$description', '$foto', '$unidad_medida', $cantidad_unidad_medida, $unidad_precio, $precio_por_mayor, $stock)";
         $this->conexion -> exec($sql);
     }
     public function numProductUser($id){
