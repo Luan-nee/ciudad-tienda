@@ -10,10 +10,6 @@
     $datos_user = $SQL_BDD -> getUserId($_SESSION['id_user']);
     $datos_product = $SQL_BDD -> getProductUser($_SESSION['id_user']);
     $numero_product = $SQL_BDD -> numProductUser($_SESSION['id_user']);
-    // echo "<hr>";
-    // print_r($numero_product);
-    // print_r($datos_user);
-    // print_r($datos_product); // XD, menudo bug.
     ?>
     <section class="header_title">
         <h2>
