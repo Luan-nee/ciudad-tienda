@@ -1,7 +1,5 @@
 
 <?php
-    session_start();
-
     include("conexion.php");
     
     // esta array contienen todas las direcciones para enlazar el 
@@ -35,3 +33,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $list_css['general']; ?>">
     <script defer src="../../JS/cantidad-lineas.js"></script>
+
+    <?php session_start(); ?>

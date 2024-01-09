@@ -1,10 +1,19 @@
 <?php 
 class bdd{
+
+    // credenciales para conexión local
     private $conexion;
     private $server = "localhost";
     private $user = "root";
     private $password = "";
     private $bdd = "ciudad";
+
+    // credenciales para conexion online
+    // private $conexion;
+    // private $server = "localhost";
+    // private $user = "id21487498_luandelsol123";
+    // private $password = "Quediaeshoy123!";
+    // private $bdd = "id21487498_nombrebasededatos";
 
     function __construct(){
         try{

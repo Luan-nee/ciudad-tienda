@@ -2,6 +2,7 @@ CREATE schema ciudad;
 use ciudad;
 drop table user;
 drop table producto;
+
 create table user(
 	id int(2) auto_increment not null,
     nombre varchar(50) not null,
@@ -11,6 +12,7 @@ create table user(
     seguidores int(3) not null,
     PRIMARY KEY (id)
 );
+
 create table producto(
 	id int(2) auto_increment not null,
     id_user int(2) not null,

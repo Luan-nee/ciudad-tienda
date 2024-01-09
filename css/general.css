@@ -16,11 +16,12 @@
 body{
     /* background-image: url(../img/space.jpg); */
     /* background-image: url(); */
+    background-color: #215888;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    color: #ffffff;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 a{
