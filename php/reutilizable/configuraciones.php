@@ -8,7 +8,7 @@
     $list_css=array(
         "general" => "../../css/general.css",
 
-        //           enlace de css + nombreArchivo.css
+        //        enlace de css + nombreArchivo.css
         "login" => $direccion_css."login/login.css",
         "perfil" => $direccion_css."cuenta-usuario/perfil.css",
         "explorar" => $direccion_css."explorar/explorar.css",
@@ -30,6 +30,7 @@
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $list_css['general']; ?>">
     <script defer src="../../JS/cantidad-lineas.js"></script>

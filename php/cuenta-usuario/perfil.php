@@ -7,9 +7,12 @@
     
     <?php include("../reutilizable/header.php");
 
+    $_SESION['id_user'] = 1; //provicionalmente se utilizará este id
+
     $datos_user = $SQL_BDD -> getUserId($_SESSION['id_user']);
     $datos_product = $SQL_BDD -> getProductUser($_SESSION['id_user']);
     $numero_product = $SQL_BDD -> numProductUser($_SESSION['id_user']);
+
     ?>
     <section class="header_title">
         <h2>
